@@ -8,6 +8,7 @@ import java.lang.reflect.*;
 public class ProxyGenerate {
 
 
+    // 动态代理1方式生成
     public static Object createProxy() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         // 生成代理类 class
         Class<?> proxy_class = Proxy.getProxyClass(ProxyGenerate.class.getClassLoader(), new Class[]{TargetInterface.class});
@@ -31,6 +32,8 @@ public class ProxyGenerate {
 
     }
 
+
+    //动态代理方法2生成
     public static Object createProxy1() throws  Exception {
             Object object = Proxy.newProxyInstance(ProxyGenerate.class.getClassLoader(), new Class[]{TargetInterface.class}, new InvocationHandler() {
             @Override

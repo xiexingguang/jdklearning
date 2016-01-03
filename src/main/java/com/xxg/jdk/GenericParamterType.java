@@ -11,7 +11,7 @@ import java.util.Enumeration;
 public class GenericParamterType<T> {
 
     public static void main(String[] args) throws IOException {
-        Enumeration<URL> urls = Thread.currentThread().getContextClassLoader().getResources("com/xxg/jdk/GenericParamterType.class");
+        Enumeration<URL> urls = Thread.currentThread().getContextClassLoader().getResources("com/xxg");
         while (urls.hasMoreElements()) {
             URL url = urls.nextElement();
             System.out.println(url.getPath());

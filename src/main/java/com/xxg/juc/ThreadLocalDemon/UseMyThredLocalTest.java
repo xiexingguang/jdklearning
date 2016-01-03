@@ -6,7 +6,7 @@ package com.xxg.juc.ThreadLocalDemon;
 public class UseMyThredLocalTest implements  Sequence{
 
 
-    private static MyThreadLocal<Integer> numberMap = new MyThreadLocal<>();
+    private static MyThreadLocal<Integer> numberMap = new MyThreadLocal<Integer>();
 
     @Override
     public int getNumber() {
